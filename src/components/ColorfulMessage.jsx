@@ -1,6 +1,6 @@
 import React from "react";
 
-const ColorfulMessage = (props) => {
+export const ColorfulMessage = (props) => {
   const { color, children } = props;
   const contentStyle = {
     color,
@@ -9,4 +9,10 @@ const ColorfulMessage = (props) => {
   return <p style={contentStyle}>{children}</p>;
 };
 
-export default ColorfulMessage;
+/** 
+ *exportの方法は２種類ある下記のパターンか
+ ３行目のconstの前にexportを記載する⇨こちらがおすすめ
+ ただし、先頭に記載するパターンはimportするファイルで指定する場合に分割代入を利用する
+ なぜおすすめかはexportしているコンポート名が間違っているとエラーを出してくれるから
+ */
+// export default ColorfulMessage;
